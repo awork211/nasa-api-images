@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% data["photos"].slice(0,8).forEach(function(photo){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= photo["img_src"] %>">
+                </div>
+            </div>
+    <% }); %>
+    </div>
+</div>
+<% include ./partials/footer %>
